@@ -46,6 +46,55 @@ module.exports = {
       message: 'Project description',
       default: 'A Vue.js project',
     },
+    Template: {
+      when: 'isNotTest',
+      type: 'list',
+      message:
+        'choose the template you want to use',
+      choices: [
+        {
+          name: 'Template1(Header + Main)',
+          value: 'template1',
+          short: 'template1',
+        },
+        {
+          name: 'Template2(Header + Main + Footer)',
+          value: 'template2',
+          short: 'template2',
+        },
+        {
+          name: 'Template3(Aside + Main)',
+          value: 'template3',
+          short: 'template3',
+        },
+        {
+          name: 'Template4(Header + Aside + Main)',
+          value: 'template4',
+          short: 'template4',
+        },
+        {
+          name: 'Template5(Header + Aside + (Main + Footer) )',
+          value: 'template5',
+          short: 'template5',
+        },
+        {
+          name: 'Template4(Header + Aside + Main)',
+          value: 'template4',
+          short: 'template4',
+        },
+        {
+          name: 'Template5(Aside + (Header + Main) )',
+          value: 'template5',
+          short: 'template5',
+        },
+        {
+          name: 'Template6(Aside + (Header + Main + Footer) )',
+          value: 'template6',
+          short: 'template6',
+        },
+      ],
+    },
+
     author: {
       when: 'isNotTest',
       type: 'string',
@@ -170,6 +219,12 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/components/Template1.vue': "Template === 'template1'",
+    'src/components/Template2.vue': "Template === 'template2'",
+    'src/components/Template3.vue': "Template === 'template3'",
+    'src/components/Template4.vue': "Template === 'template4'",
+    'src/components/Template5.vue': "Template === 'template5'",
+    'src/components/Template6.vue': "Template === 'template6'",
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

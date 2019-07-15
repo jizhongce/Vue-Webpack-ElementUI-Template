@@ -4,11 +4,14 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+import ElementUI from 'element-ui'
 {{#router}}
 import router from './router'
 {{/router}}
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
