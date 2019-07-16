@@ -78,19 +78,14 @@ module.exports = {
           short: 'template5',
         },
         {
-          name: 'Template4(Header + Aside + Main)',
-          value: 'template4',
-          short: 'template4',
-        },
-        {
-          name: 'Template5(Aside + (Header + Main) )',
-          value: 'template5',
-          short: 'template5',
-        },
-        {
-          name: 'Template6(Aside + (Header + Main + Footer) )',
+          name: 'Template6(Aside + (Header + Main) )',
           value: 'template6',
           short: 'template6',
+        },
+        {
+          name: 'Template7(Aside + (Header + Main + Footer) )',
+          value: 'template7',
+          short: 'template7',
         },
       ],
     },
@@ -225,6 +220,7 @@ module.exports = {
     'src/components/Template4.vue': "Template === 'template4'",
     'src/components/Template5.vue': "Template === 'template5'",
     'src/components/Template6.vue': "Template === 'template6'",
+    'src/components/Template7.vue': "Template === 'template7'",
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
